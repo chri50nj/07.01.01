@@ -1,0 +1,346 @@
+html {
+  --produktliste: rgba(128, 128, 128, 0.547);
+  --fonts: "Quicksand", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+main {
+  max-width: 1300px;
+  margin-inline: auto;
+}
+img {
+  vertical-align: middle;
+  width: 70%;
+  height: auto;
+  padding-bottom: 2rem;
+}
+h1 {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  font-size: 3rem;
+  font-family: var(--fonts);
+}
+h3 {
+  font-family: var(--fonts);
+  padding-bottom: 0.6rem;
+}
+p {
+  font-family: var(--fonts);
+  padding-top: 0.3rem;
+}
+a {
+  text-decoration: underline;
+  text-decoration-color: rgba(128, 128, 128, 0.654);
+  text-underline-offset: 5px;
+  font-size: 1.2rem;
+  color: black;
+}
+
+:root {
+  --off-color: red;
+}
+.mainNav h1 span {
+  display: inline-block;
+
+  color: var(--off-color);
+}
+.mainNav > * {
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+}
+
+/******************* Mobil *******************/
+@media (max-width: 621px) {
+  /******************* Index *******************/
+  .logo {
+    max-width: 50%;
+    text-align: left;
+    padding-top: 3rem;
+    padding-left: 2rem;
+  }
+
+  .menu a {
+    color: rgba(0, 0, 0, 0.543);
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding-left: 0.7rem;
+  }
+  /******************* Kategori *******************/
+  .produktliste {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .produktliste a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: 2em;
+    background-color: var(--produktliste);
+    text-align: center;
+  }
+  .kategoriOverskrift {
+    padding-left: 2rem;
+  }
+  /******************* Produktliste *******************/
+  .tekst {
+    padding-bottom: 3rem;
+    padding-top: 1.2rem;
+  }
+  .imidtenFarve {
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.134);
+  }
+  .procenter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+  .procenter p:last-child {
+    width: 60px;
+    border: 15px solid red;
+    background-color: red;
+  }
+  .merePladsImellem {
+    padding-bottom: 0.5rem;
+  }
+  .productist article.soldOut img {
+    opacity: 0.5;
+  }
+  .productist article.soldOut::before {
+    content: "Sold Out";
+    position: absolute;
+    background: rgba(128, 128, 128, 0.715);
+    color: black;
+    padding: 1rem;
+  }
+  .productist article > * {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  .productist article.onSale .discounted {
+    display: flex;
+    justify-content: space-between;
+  }
+  .discounted p:last-child {
+    background: red;
+    padding: 0.4rem;
+    font-size: 1.5rem;
+  }
+  .productist article .grid_4-4-4-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    gap: 50px;
+  }
+  .productist main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+    gap: 2rem;
+  }
+  .productist main h1 {
+    grid-column: 1/-1;
+  }
+  /******************* Produkt *******************/
+  .vækFraSiden {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .produktNavn {
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .andenFarve {
+    color: rgba(0, 0, 0, 0.507);
+    padding-bottom: 1rem;
+  }
+  button {
+    font-size: 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+    border: 2px solid;
+    width: 100%;
+    padding: 14px 28px;
+    background-color: rgba(255, 0, 0, 0.713);
+  }
+  .knap {
+    padding-top: 1rem;
+  }
+  label {
+    font-size: 1.5rem;
+  }
+  .information {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  .informationMatriale {
+    padding-bottom: 1.5rem;
+  }
+}
+@media (min-width: 621px) {
+  /******************* Index *******************/
+  .logo {
+    max-width: 38%;
+    text-align: left;
+    padding-top: 3rem;
+    padding-left: 2rem;
+  }
+
+  .menu a {
+    color: rgba(0, 0, 0, 0.543);
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding-left: 0.7rem;
+  }
+  .forsideTekst {
+    font-size: 2rem;
+    padding-top: 7rem;
+    text-align: center;
+  }
+  .forsideBillede {
+    text-align: center;
+  }
+  /******************* Kategori *******************/
+  .produktliste {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .produktliste a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: 2em;
+    background-color: var(--produktliste);
+    text-align: center;
+  }
+  .kategoriOverskrift {
+    padding-left: 2rem;
+  }
+  /******************* Produktliste *******************/
+  /*.imidten {
+    text-align: center;
+  } */
+  .tekst {
+    padding-bottom: 3rem;
+    padding-top: 1.2rem;
+  }
+  /*
+  .imidtenFarve {
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.134);
+  } */
+  .procenter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+  .procenter p:last-child {
+    width: 60px;
+    border: 15px solid red;
+    background-color: red;
+  }
+  .merePladsImellem {
+    padding-bottom: 0.5rem;
+  }
+  .productist article.soldOut img {
+    opacity: 0.5;
+  }
+  .productist article.soldOut::before {
+    content: "Sold Out";
+    position: absolute;
+    background: rgba(128, 128, 128, 0.715);
+    color: black;
+    padding: 1rem;
+  }
+  .productist article > * {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  .discounted {
+    display: none;
+  }
+  .productist article.onSale .discounted {
+    display: flex;
+    justify-content: space-between;
+  }
+  .discounted p:last-child {
+    background: red;
+    padding: 0.4rem;
+    font-size: 1.5rem;
+  }
+  .productist article .grid_4-4-4-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    gap: 50px;
+  }
+  .productist main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+    gap: 2rem;
+  }
+  .productist main h1 {
+    grid-column: 1/-1;
+  }
+  /******************* Produkt *******************/
+  .produktPlacering {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .produktNavn {
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .andenFarve {
+    color: rgba(0, 0, 0, 0.507);
+    padding-bottom: 1rem;
+  }
+  button {
+    font-size: 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+    border: 2px solid;
+    width: 100%;
+    padding: 14px 28px;
+    background-color: rgba(255, 0, 0, 0.713);
+  }
+  .knap {
+    padding-top: 1rem;
+  }
+  label {
+    font-size: 1.5rem;
+  }
+  .information {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  .informationMatriale {
+    padding-bottom: 1.5rem;
+  }
+  .grid_2-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .flex_col2 {
+    padding-left: 2rem;
+  }
+}
